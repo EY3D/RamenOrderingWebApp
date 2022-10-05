@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\beverages\" />
+    <Folder Include="wwwroot\images\other_mains\" />
+    <Folder Include="wwwroot\images\ramen\" />
   </ItemGroup>
 
 </Project>
