@@ -1,26 +1,30 @@
 ﻿@page
-@model RamenOrderingWebApp.Pages.Forms.CustomiseModel
+@model RamenOrderingWebApp.Models.RamenModel;
 @{
 }
-@Html.EnumDropDownListFor(model => model.SoupBase)
 
-<div class="text-center container">
-    <h1>Make your own bowl of ramen</h1>
+@using RamenOrderingWebApp.Models.Enums;
+
+<div class="container">
+<div class="container">
+    <h4 class="text-center">Make your own bowl of ramen</h4>
     <form method="post">
-        <input type="text" asp-for="Ramen.RamenName" 
-        placeholder="Name your masterpiece..." />
-        <br />
-        <div class="">
-        <select asp-for="Ramen.SoupBase" asp-items="Html.GetEnumSelectList<SoupBase>()">
-            <input type="checkbox" asp-for="Ramen.ChaSiew2Pc"
+
+        <div class="form-group mt-4 mb-4">
+            <div>Name of ramen</div>
+            <input type="text" asp-for="@Model.RamenName"
+                   placeholder="Name your masterpiece..." />
+            <br />
+            <div>Soup base</div>
+            <select asp-for="@Model.SoupBase" class="form-control" asp-items="Html.GetEnumSelectList<SoupBaseEnum>()"></select>
+            <span asp-validation-for="@Model.SoupBase" class="text-danger"></span>
+            <input type="checkbox" asp-for="@Model.ChaSiew2Pc"
                    placeholder="ChaSiew2Pc" /> ChaSiew 2 Pc
             <br />
-            <input type="checkbox" asp-for="Ramen.OnsenEgg"
+            <input type="checkbox" asp-for="@Model.OnsenEgg"
                    placeholder="OnsenEgg" /> OnsenEgg
             <br />
         </div>
-
         <button class="btn btn-primary mt-1" type="submit">Done</button>
-
     </form>
 </div>
