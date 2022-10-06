@@ -10,7 +10,7 @@
     <h4 class="text-center">Make your own bowl of ramen</h4>
     <form method="post">
 
-        <div class="form-group mt-4 mb-4">
+        <div class="form-group pt-2 pb-2">
             <div>Name of ramen</div>
             <input type="text" asp-for="@Model.RamenName"
                    placeholder="Name your masterpiece..." />
@@ -18,12 +18,14 @@
             <div>Soup base</div>
             <select asp-for="@Model.SoupBase" class="form-control" asp-items="Html.GetEnumSelectList<SoupBaseEnum>()"></select>
             <span asp-validation-for="@Model.SoupBase" class="text-danger"></span>
-            <input type="checkbox" asp-for="@Model.ChaSiew2Pc"
-                   placeholder="ChaSiew2Pc" /> ChaSiew 2 Pc
-            <br />
-            <input type="checkbox" asp-for="@Model.OnsenEgg"
-                   placeholder="OnsenEgg" /> OnsenEgg
-            <br />
+            <input type="checkbox" asp-for="@Model.ChaSiew2Pc" placeholder="ChaSiew2Pc" /> ChaSiew (2 Pc)<br />
+            <input type="checkbox" asp-for="@Model.BeefChunks" placeholder="BeefChunks" /> Beef Chunks <br />
+            <input type="checkbox" asp-for="@Model.OnsenEgg" placeholder="OnsenEgg" /> Onsen Egg<br />
+            <input type="checkbox" asp-for="@Model.EnokiMushrooms" placeholder="EnokiMushrooms" /> Enoki Mushrooms <br />
+            <input type="checkbox" asp-for="@Model.BambooShoots" placeholder="BambooShoots"/> Bamboo Shoots <br />
+            <input type="checkbox" asp-for="@Model.SpringOnion" placeholder="SpringOnion"/> Spring Onion<br />
+
+
         </div>
         <button class="btn btn-primary mt-1" type="submit">Done</button>
     </form>

@@ -9,6 +9,7 @@ namespace RamenOrderingWebApp.Models
         public float BasePrice { get; set; } = 3;
         public SoupBaseEnum SoupBase { get; set; }
         public bool ChaSiew2Pc { get; set; }
+        public bool BeefChunks { get; set; }
         public bool OnsenEgg { get; set; }
         public bool EnokiMushrooms { get; set; }
         public bool BambooShoots { get; set; }
