@@ -38,6 +38,10 @@ namespace RamenOrderingWebApp.Pages.Forms
                 case Models.Enums.SoupBaseEnum.Miso:
                     RamenPrice += 1;
                     break;
+
+                case Models.Enums.SoupBaseEnum.CreamOfMushroom:
+                    RamenPrice += 2;
+                    break;
             }
 
             if (Ramen.ChaSiew2Pc) RamenPrice += 3;

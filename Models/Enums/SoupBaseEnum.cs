@@ -2,6 +2,6 @@
 {
     public enum SoupBaseEnum
     {
-        PorkBone, Garlic, Salt, SpicySalt, Miso
+        PorkBone, Garlic, Salt, SpicySalt, Miso, CreamOfMushroom
     }
 }
