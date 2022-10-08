@@ -1,5 +1,5 @@
 ﻿@page
-@model RamenOrderingWebApp.Models.RamenModel;
+@model RamenOrderingWebApp.Pages.Forms.CustomiseModel;
 @{
 }
 
@@ -12,18 +12,18 @@
 
         <div class="form-group pt-2 pb-2">
             <div>Name of ramen</div>
-            <input type="text" asp-for="@Model.RamenName"
+            <input type="text" asp-for="Ramen.RamenName"
                    placeholder="Name your masterpiece..." />
             <br />
             <div>Soup base</div>
-            <select asp-for="@Model.SoupBase" class="form-control" asp-items="Html.GetEnumSelectList<SoupBaseEnum>()"></select>
-            <span asp-validation-for="@Model.SoupBase" class="text-danger"></span>
-            <input type="checkbox" asp-for="@Model.ChaSiew2Pc" placeholder="ChaSiew2Pc" /> ChaSiew (2 Pc)<br />
-            <input type="checkbox" asp-for="@Model.BeefChunks" placeholder="BeefChunks" /> Beef Chunks <br />
-            <input type="checkbox" asp-for="@Model.OnsenEgg" placeholder="OnsenEgg" /> Onsen Egg<br />
-            <input type="checkbox" asp-for="@Model.EnokiMushrooms" placeholder="EnokiMushrooms" /> Enoki Mushrooms <br />
-            <input type="checkbox" asp-for="@Model.BambooShoots" placeholder="BambooShoots"/> Bamboo Shoots <br />
-            <input type="checkbox" asp-for="@Model.SpringOnion" placeholder="SpringOnion"/> Spring Onion<br />
+            <select asp-for="Ramen.SoupBase" class="form-control" asp-items="Html.GetEnumSelectList<SoupBaseEnum>()"></select>
+            <span asp-validation-for="Ramen.SoupBase" class="text-danger"></span>
+            <input type="checkbox" asp-for="Ramen.ChaSiew2Pc" placeholder="ChaSiew2Pc" /> ChaSiew (2 Pc)<br />
+            <input type="checkbox" asp-for="Ramen.BeefChunks" placeholder="BeefChunks" /> Beef Chunks <br />
+            <input type="checkbox" asp-for="Ramen.OnsenEgg" placeholder="OnsenEgg" /> Onsen Egg<br />
+            <input type="checkbox" asp-for="Ramen.EnokiMushrooms" placeholder="EnokiMushrooms" /> Enoki Mushrooms <br />
+            <input type="checkbox" asp-for="Ramen.BambooShoots" placeholder="BambooShoots"/> Bamboo Shoots <br />
+            <input type="checkbox" asp-for="Ramen.SpringOnion" placeholder="SpringOnion"/> Spring Onion<br />
 
 
         </div>

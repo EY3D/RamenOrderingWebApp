@@ -3,4 +3,17 @@
 @{
 }
 
-<a class="nav-link text-dark" asp-area="" asp-page="Checkout/ThankYou">Thank you for your order!</a>
+<h3 class="text-center">Ramen summary</h3>
+@{
+    var imagePath = "~/images/BOWL_unsplash.com_sl_akariya" + (/*Model.ImageTitle + ".*/".jpg");
+}
+<div class="align-content-center">
+    <div class="col-3 mx-auto mb-5">
+        <img src=@imagePath class="w-100" asp-append-version="true" />
+        <p>Your order for @Model.RamenName is ready!</p>
+        <p>Total price for your order is: $@Model.RamenPrice</p>
+        <br />
+        <a class="btn btn-primary mt-1 mx-auto" asp-area="" asp-page="ThankYou">Confirm Order</a>  
+        <a class="btn btn-danger mt-1 mx-auto" asp-area="" asp-page="../Forms/Customise">Back</a>
+    </div>
+</div>
