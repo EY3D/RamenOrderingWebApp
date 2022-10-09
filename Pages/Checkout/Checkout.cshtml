@@ -2,18 +2,14 @@
 @model RamenOrderingWebApp.Pages.Checkout.CheckoutModel
 @{
 }
-
 <h3 class="text-center">Ramen summary</h3>
-@{
-    var imagePath = "~/images/BOWL_unsplash.com_sl_akariya" + (/*Model.ImageTitle + ".*/".jpg");
-}
 <div class="align-content-center">
     <div class="col-3 mx-auto mb-5">
-        <img src=@imagePath class="w-100" asp-append-version="true" />
-        <p>Your order for @Model.RamenName is ready!</p>
+        <img src=@Model.ImagePath class="w-100 rounded" asp-append-version="true" />
+        <p>Are you sure you want to order @Model.RamenName?</p>
         <p>Total price for your order is: $@Model.RamenPrice</p>
         <br />
         <a class="btn btn-primary mt-1 mx-auto" asp-area="" asp-page="ThankYou">Confirm Order</a>  
-        <a class="btn btn-danger mt-1 mx-auto" asp-area="" asp-page="../Forms/Customise">Back</a>
+        <a class="btn btn-danger mt-1 mx-auto" asp-area="" asp-page="../RamenMenu">Cancel</a>
     </div>
 </div>

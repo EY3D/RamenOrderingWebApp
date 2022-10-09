@@ -21,17 +21,20 @@
                         </div>
                     </div>
                 </div>
-                
-                @foreach (var ramen in Model.fakeRamenDB)
-                {
-                    var imagepath = "~images/ramen/" + ramen.ImagePath + ".jpg";
-                    <div class="col-4 mb-5">
-                        <img src="" class="w-100" asp-append-version="true" />
-                        <a class="btn btn-primary mt-4" asp-area="" asp-page="/Checkout/Checkout">Get this ramen!</a>
-                        <br />
-                    </div>
-                }
             </div>
+                            
+            @foreach (var ramen in Model.fakeRamenDB)
+            {
+                var imagepath = "~/images/ramen/" + ramen.ImagePath;
+                <div class="col-4 mb-5">
+                    <img src="@imagepath" class="w-100 rounded" asp-append-version="true" />
+                    <a class="btn btn-primary mt-4" asp-area="" asp-page="/Checkout/Checkout"
+                    asp-route-RamenName="@ramen.RamenName"
+                    asp-route-ImagePath="@ramen.ImagePath"
+                    asp-route-RamenPrice="@ramen.FinalPrice">@ramen.RamenName <br />($@ramen.FinalPrice)</a>
+                    <br />
+                </div>
+            }
         </div>
     </div>
 </div>

@@ -8,16 +8,20 @@ namespace RamenOrderingWebApp.Pages.Checkout
     {
         public string RamenName { get; set; }
         public float RamenPrice { get; set; }
-        public string ImageTitle { get; set; }
+        public string ImagePath { get; set; }
         public void OnGet()
         {
             if(string.IsNullOrEmpty(RamenName))
             {
-                RamenName = "My ramen";
+                RamenName = "My Ramen";
             }
-            if(string.IsNullOrEmpty(ImageTitle))
+            if(string.IsNullOrEmpty(ImagePath))
             {
-                ImageTitle = "Create";
+                ImagePath = "~/images/BOWL_unsplash.com_sl_akariya.jpg";
+            }
+            else
+            {
+                ImagePath = "~/images/ramen/" + ImagePath;
             }
         }
     }

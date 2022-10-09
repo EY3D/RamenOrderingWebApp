@@ -38,25 +38,11 @@ namespace RamenOrderingWebApp.Pages
 
             new RamenModel()
             {
-                RamenName = "Budget Ramen",
-                ImagePath = "ramen-budget.jpg",
-                SoupBase = Models.Enums.SoupBaseEnum.Salt,
-                ChaSiew2Pc = false,
-                BeefChunks = false,
-                OnsenEgg = true,
-                EnokiMushrooms = true,
-                BambooShoots = true,
-                SpringOnion = true,
-                FinalPrice = 4
-            },
-
-            new RamenModel()
-            {
                 RamenName = "Mushroom Ramen",
                 ImagePath = "ramen-creamofmushroom.jpg",
                 SoupBase = Models.Enums.SoupBaseEnum.CreamOfMushroom,
-                ChaSiew2Pc = false,
-                BeefChunks = true,
+                ChaSiew2Pc = true,
+                BeefChunks = false,
                 OnsenEgg = true,
                 EnokiMushrooms = true,
                 BambooShoots = true,
