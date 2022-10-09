@@ -1,0 +1,40 @@
+﻿@page
+@model RamenOrderingWebApp.Pages.OrdersModel
+@{
+}
+
+<h6 class="text-center mt-4">Orders</h6>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Ramen Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var order in Model.RamenOrders)
+        {
+            <tr>
+                <td>
+                    @order.ID;
+                </td>
+                <td>
+                    @order.RamenName;
+                </td>
+                <td>
+                    @order.Price;
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
